@@ -1,0 +1,64 @@
+/*Markdown styles*/
+
+#preview {
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+#preview > :is(h1, h2, h3, h4, h5, h6) {
+	border-bottom: 0.1em solid $secondary;
+	padding-bottom: 0.3em;
+	width: fit-content;
+}
+
+#preview blockquote {
+	border-left: 4px solid $secondary;
+	padding: 15px;
+	margin-left: 2rem;
+	background-color: hsla(0, 0%, 50%, 0.3);
+}
+
+#preview blockquote p {
+	margin: 0;
+}
+
+#preview code {
+	font-family: "Fira Code", monospace;
+	background-color: $gray-800;
+	border-radius: 5px;
+	padding: 10px;
+	color: $light;
+	line-height: 1.5rem;
+}
+#preview pre {
+	display: block;
+	overflow: hidden;
+	background: $gray-800;
+	padding: 2rem;
+	border-radius: 5px;
+	width: fit-content;
+}
+
+#preview table {
+	border-collapse: collapse;
+}
+#preview td,
+#preview th {
+	border: 3px solid $secondary;
+	padding: 0.5ch;
+}
+#preview th {
+	background-color: hsla(0, 0%, 50%, 0.3);
+	line-height: 2rem;
+}
+#preview img {
+	display: block;
+	max-width: 90%;
+	margin: 2rem auto;
+}
+#preview a {
+	color: $secondary;
+	font-weight: 600;
+}

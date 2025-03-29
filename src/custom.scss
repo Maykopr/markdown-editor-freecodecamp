@@ -1,0 +1,90 @@
+// Definição de cores principais
+$primary: hsl(198, 90%, 45%);
+$primary-dark: hsl(198, 90%, 36%);
+$primary-light: hsl(198, 90%, 55%);
+$secondary: hsl(29, 70%, 50%);
+$secondary-dark: hsl(29, 70%, 40%);
+$secondary-light: hsl(29, 70%, 60%);
+$tertiary: hsl(88, 80%, 73%);
+$tertiary-dark: hsl(88, 80%, 63%);
+$tertiary-light: hsl(88, 80%, 83%);
+$success: hsl(134, 61%, 41%);
+$info: hsl(188, 78%, 41%);
+$warning: hsl(45, 100%, 51%);
+$danger: hsl(354, 70%, 54%);
+$light: hsl(00, 0%, 90%);
+$dark: hsl(0, 0%, 15%);
+
+$gray-100: hsl(0, 0%, 90%);
+$gray-200: hsl(0, 0%, 80%);
+$gray-300: hsl(0, 0%, 70%);
+$gray-400: hsl(0, 0%, 60%);
+$gray-500: hsl(0, 0%, 50%);
+$gray-600: hsl(0, 0%, 40%);
+$gray-700: hsl(0, 0%, 30%);
+$gray-800: hsl(0, 0%, 20%);
+$gray-900: hsl(0, 0%, 10%);
+
+$body-bg: $light;
+$body-color: $dark;
+
+// Extendendo a paleta de cores originais com map-merge
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"success": $success,
+	"info": $info,
+	"warning": $warning,
+	"danger": $danger,
+	"light": $light,
+	"dark": $dark,
+);
+
+$custom-colors: (
+	"primary-dark": $primary-dark,
+	"primary-light": $primary-light,
+	"secondary-dark": $secondary-dark,
+	"secondary-light": $secondary-light,
+	"tertiary": $tertiary,
+	"tertiary-dark": $tertiary-dark,
+	"tertiary-light": $tertiary-light,
+	"gray-100": $gray-100,
+	"gray-200": $gray-200,
+	"gray-300": $gray-300,
+	"gray-400": $gray-400,
+	"gray-500": $gray-500,
+	"gray-600": $gray-600,
+	"gray-700": $gray-700,
+	"gray-800": $gray-800,
+	"gray-900": $gray-900,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Tipografia
+$font-family-sans-serif: "Poppins", sans-serif;
+$font-family-monospace: "Courier New", monospace;
+$font-size-base: 1rem; // 16px
+$h1-font-size: 2rem;
+$h2-font-size: 1.8rem;
+$h3-font-size: 1.6rem;
+$h4-font-size: 1.4rem;
+$h5-font-size: 1.2rem;
+$h6-font-size: 1rem;
+
+// Espaçamentos padrão
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer * 1,
+	4: $spacer * 1.5,
+	5: $spacer * 3,
+);
+
+// Importa o Bootstrap com as configurações personalizadas
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//  Add additional custom code here
+@import "./components/markdown.scss";
