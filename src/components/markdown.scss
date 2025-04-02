@@ -28,17 +28,20 @@
 	font-family: "Fira Code", monospace;
 	background-color: $gray-800;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 5px;
 	color: $light;
 	line-height: 1.5rem;
+	width: 100%;
+	overflow: hidden;
+	word-wrap: break-word;
 }
 #preview pre {
 	display: block;
-	overflow: hidden;
 	background: $gray-800;
-	padding: 2rem;
+	padding: 1.5rem;
 	border-radius: 5px;
 	width: fit-content;
+	max-width: 100%;
 }
 
 #preview table {
